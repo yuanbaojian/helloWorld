@@ -65,7 +65,7 @@ public class UserController {
     }
 
     @GetMapping("/getUserById")
-    public User getUserById(Long userId){
+    public User getUserById(String userId){
 //        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         User user = userService.getById(userId);
         return user;
@@ -126,6 +126,7 @@ public class UserController {
      * @param user 用户信息
      * @return JsonResult 状态响应类
      */
+    @CacheEvict(value = "userList",allEntries = true)
     @PostMapping(value = "/save")
     public JsonResult save(@RequestBody User user) {
 //        User loginUser = (User)SecurityUtils.getSubject().getPrincipal();
@@ -219,6 +220,12 @@ public class UserController {
         } catch (Exception e){
             return JsonResult.fail();
         }
+    }
+
+    @DeleteMapping("/delete")
+    public JsonResult delete(String userId){
+        userService.removeById(userId);
+        return JsonResult.ok();
     }
 
 }

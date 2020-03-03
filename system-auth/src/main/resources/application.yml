@@ -34,13 +34,6 @@ spring:
 
 
 mybatis-plus:
-  mapper-locations: classpath:com/ybj/auth/mapping/*.xml , classpath:com/ybj/crawler/mapping/*.xml
+  mapper-locations: classpath:com/ybj/auth/mapping/*.xml
   type-aliases-package: com.ybj.auth.model,  com.ybj.crawler.model
 
-
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
-  page-size-zero: true
-  params: count=countSql

@@ -44,11 +44,11 @@ public class Generator {
         Generator g = new Generator();
         boolean startWithI = false;
         // 1.模块名
-        String projectName = "system-clawer";
+        String projectName = "system-crawler";
         // 2.代码位置
-        String packageName = "com.ybj.cbt";
+        String packageName = "com.ybj.crawler";
         // 3.表名
-        String[] tableNameArray={ "tbl_ip_bean"} ;
+        String[] tableNameArray = {"tbl_folder"};
         g.generateByTables(startWithI,projectName,packageName, tableNameArray);
     }
     /**

@@ -1,8 +1,9 @@
 package com.ybj.crawler.controller;
 
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+import com.baomidou.mybatisplus.core.injector.methods.SelectPage;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ybj.crawler.common.Constants;
 import com.ybj.crawler.model.IpBean;
 import com.ybj.crawler.model.IpBeanList;
@@ -57,13 +58,10 @@ public class IpBeanController {
     }
 
     @GetMapping("/getAllIp")
-    public PageInfo<IpBean> getAllIp(int pageNum, int pageSize) throws IOException {
-        //分页
-        PageHelper.startPage(pageNum ,pageSize);
-        List<IpBean> IpBeanList=null;
-        List<IpBean> ipBeanList = ipBeanService.list();
-        PageInfo<IpBean> pageInfo = new PageInfo(ipBeanList);
-        return pageInfo;
+    public Page<IpBean> getAllIp(int pageNum, int pageSize) throws IOException {
+        Page<IpBean> ipBeanPage = new Page<>(pageNum , pageSize, true);
+        Page<IpBean> ipBeanPage1 = ipBeanService.page(ipBeanPage);
+        return ipBeanPage1;
     }
 
     @GetMapping("/getValidIp")
