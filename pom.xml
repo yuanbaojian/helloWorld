@@ -44,7 +44,7 @@
         <shiro.version>1.4.2</shiro.version>
         <jedis.version>3.1.0</jedis.version>
         <junrar.version>4.0.0</junrar.version>
-        <httpcomponents.version>4.5.9</httpcomponents.version>
+        <httpcomponents.version>4.5.13</httpcomponents.version>
         <logback.version>1.2.3</logback.version>
         <jsonpath.version>2.4.0</jsonpath.version>
         <dom4j.version>1.6.1</dom4j.version>
