@@ -43,7 +43,7 @@
         <ezmorph.version>1.0.6</ezmorph.version>
         <shiro.version>1.4.2</shiro.version>
         <jedis.version>3.1.0</jedis.version>
-        <junrar.version>4.0.0</junrar.version>
+        <junrar.version>7.4.1</junrar.version>
         <httpcomponents.version>4.5.9</httpcomponents.version>
         <logback.version>1.2.3</logback.version>
         <jsonpath.version>2.4.0</jsonpath.version>
