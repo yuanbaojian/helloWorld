@@ -41,7 +41,7 @@
         <log4j.version>1.2.17</log4j.version>
         <poi.version>4.1.0</poi.version>
         <ezmorph.version>1.0.6</ezmorph.version>
-        <shiro.version>1.4.2</shiro.version>
+        <shiro.version>1.7.1</shiro.version>
         <jedis.version>3.1.0</jedis.version>
         <junrar.version>4.0.0</junrar.version>
         <httpcomponents.version>4.5.9</httpcomponents.version>
